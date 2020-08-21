@@ -293,7 +293,7 @@ class Run:
             data_csv = csv.writer(data_file)
             data_csv.writerow(data[0].keys())
             for o in data:
-                row = [s.encode('utf-8') for s in o.values()]
+                row = [s.encode('utf-8') if type(s) == str else s for s in o.values()]
                 data_csv.writerow(row)
         data_file.close()
 
