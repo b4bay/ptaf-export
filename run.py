@@ -195,7 +195,8 @@ class Run:
             "CLIENT_IP",
             "CLIENT_COUNTRY_CODE",
             "CLIENT_COUNTRY_NAME",
-            "CLIENT_BROWSER"
+            "CLIENT_BROWSER",
+            "CLIENT_USERAGENT"
         ]
 
     def bootstrap(self):
