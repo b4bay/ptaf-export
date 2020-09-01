@@ -5,10 +5,12 @@ The tool is designed to use for reporting by [ptaf-report](https://github.com/b4
 
 # How to use
 1. Copy `run.py` to PT AF, for example by wget:
+
     ```
     $ wget https://raw.githubusercontent.com/b4bay/ptaf-export/master/run.py
     ```
 2. Run script with `sudo` using options needed:
+
     ```
     $ sudo /opt/waf/python/bin/python ./run.py -h
     usage: run.py [-h] [-w WEBAPP_NAME] [--range RANGE] [--end_date END_DATE]
