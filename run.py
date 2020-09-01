@@ -103,21 +103,21 @@ def parse_cli_args(test_data=""):
                         dest='WEBAPP_NAME',
                         default='Any',
                         required=False,
-                        help='webapp name')
+                        help='webapp name, "Any" by default')
     parser.add_argument('--range', '-r',
                         dest='RANGE',
                         type=int,
                         required=False,
                         default=7,
                         action='store',
-                        help='Data range in days from start date')
+                        help='Data range in days from start date, 7 by default')
     parser.add_argument('--end_date', '-e',
                         dest='END_DATE',
                         required=False,
                         default=datetime.today().date(),
                         type=lambda s: ((datetime.today().date()+timedelta(days=1)) if s == 'today' else datetime.strptime(s, '%Y-%m-%d').date()),
                         action='store',
-                        help='End of exported timeframe, in YYYY-MM-DD form (e.g. 2020-05-01) or just "today"')
+                        help='End of exported timeframe, in YYYY-MM-DD form (e.g. 2020-05-01) or just "today". Default is "today"')
 
     if test_data:
         args = parser.parse_args(test_data)
@@ -294,7 +294,7 @@ class Run:
             data_csv = csv.writer(data_file)
             data_csv.writerow(data[0].keys())
             for o in data:
-                row = [s.encode('utf-8') if type(s) == str else s for s in o.values()]
+                row = [s.encode('utf-8') if type(s) == str or type(s) == unicode else s for s in o.values()]
                 data_csv.writerow(row)
         data_file.close()
 
