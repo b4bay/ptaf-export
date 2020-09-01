@@ -5,7 +5,6 @@ The tool is designed to use for reporting by [ptaf-report](https://github.com/b4
 
 # How to use
 1. Copy `run.py` to PT AF, for example by wget:
-
     ```
     $ wget https://raw.githubusercontent.com/b4bay/ptaf-export/master/run.py
     ```
