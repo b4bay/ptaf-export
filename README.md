@@ -6,7 +6,7 @@ The tool is designed to use for reporting by [ptaf-report](https://github.com/b4
 # How to use
 1. Copy `run.py` to PT AF, for example by wget:
     ```
-    $ wg et https://raw.githubusercontent.com/b4bay/ptaf-export/master/run.py
+    $ wget https://raw.githubusercontent.com/b4bay/ptaf-export/master/run.py
     ```
 2. Run script with `sudo` using options needed:
     ```
